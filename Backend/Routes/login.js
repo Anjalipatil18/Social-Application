@@ -1,4 +1,5 @@
-const knex=require("../Model/knex")
+const knex=require("../Model/loginDb")
+
 module.exports=(app,jwt)=>{
     app.post('/register',(req,res)=>{
         var body_data =  {
@@ -7,7 +8,7 @@ module.exports=(app,jwt)=>{
             password:req.body.password
         }
         knex.register(body_data)
-        .then((right)=>{
+        .then((result)=>{
             var token = jwt.sign({
                 "jwt": body_data
               }, 'secret');

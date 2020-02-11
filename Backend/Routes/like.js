@@ -1,4 +1,5 @@
-const knex = require('../Model/knex_like')
+const knex = require('../Model/likeDb')
+
 module.exports=(app,jwt)=>{
     app.post('/like', (req, res) => {
         var token=req.headers.cookie.split(" ")

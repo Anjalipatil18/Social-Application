@@ -1,4 +1,4 @@
-const knex=require("../Model/knex_home")
+const knex=require("../Model/homeDb")
 const upload =require('./multer')
 const fs = require ('fs')
 var map = new Map()
